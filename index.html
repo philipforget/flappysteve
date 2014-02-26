@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+        <title>BACO</title>
+        <script src="preloadjs-NEXT.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="createjs-2013.09.25.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="ndgmr.Collision.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+           var outerPadding = 0
+
+            function setHeight() {
+                // if ($('canvas').height() < $(window.top).height()) {
+                    var difference = $(window.top).height() - $('canvas').height()
+                    $('canvas').css({marginTop : difference/2})
+                // }
+            }
+            $(window).resize(function() {
+                setHeight()
+            }) 
+        </script>
+        <script src="game.min.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+    <canvas id="testCanvas" width="768" height="1024" style="margin-top: 0px;"></canvas>
+    <script type="text/javascript" charset="utf-8">
+        init()
+    </script>
+    </body>
+</html>
